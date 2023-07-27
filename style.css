@@ -2,3 +2,18 @@ html body{
     width: 100%;
     background-color: antiquewhite;
 }
+
+.block{
+    background-color: blue;
+    width: 100px;
+    height: 100vh;
+}
+
+.block2 {
+    background-color: blue;
+    width: 200px;
+    height:100vh;
+    position: absolute;
+    right: 0;
+    top:0;
+}

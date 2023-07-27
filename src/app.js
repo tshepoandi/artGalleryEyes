@@ -1,7 +1,7 @@
  let input = {
     mouseX:{
-        start:0,
-        end: window.innerWidth,
+        start:100,
+        end: window.innerWidth - 200,
         current:0,
     },
     mouseY: {}
@@ -17,8 +17,8 @@ let handleMouseMovement = (event) => {
 }
 
 let handleResize = () => {
-    input.mouseX.end = window.innerWidth;
-    input.mouseX.range = input.mouseX.end - input.mouseX.start;
+    input.mouseX.end = window.innerWidth - 200;
+    input.mouseX.range = input.mouseX.end - input.mouseX.start; 
 }
 window.addEventListener('mousemove', handleMouseMovement)
 window.addEventListener('resize', handleResize)

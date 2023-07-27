@@ -15,6 +15,9 @@ let input = {
         current: 0,
     }
  } 
+input.mouseX.range = input.mouseX.end - input.mouseX.start;
+input.mouseY.range = input.mouseY.end - input.mouseX.start;
+
 
  let output = {
     x:{ 
@@ -23,33 +26,31 @@ let input = {
         current: 0,
     },
     y:{
-
+        start: -100,
+        end: 100,
+        current:0,    
     }
  }
-
 output.x.range = output.x.end - output.x.start 
+output.y.range = output.y.end - output.y.start
 
-
-input.mouseX.range = input.mouseX.end - input.mouseX.start;
-input.mouseY.range = input.mouseY.end - input.mouseX.start;
 
 let handleMouseMovement = (event) => {
     input.mouseX.current = event.clientX;
     input.mouseX.fraction = (input.mouseX.current - input.mouseX.start) / input.mouseX.range
-    // let greaterthan1 = input.mouseX.fraction > 1 ? 1 : input.mouseX.fraction
-    // console.log(input.mouseX.fraction < 0 ? 0 : greaterthan1)
-
+  
     input.mouseY.current = event.clientY
     input.mouseY.fraction = (input.mouseY.current - input.mouseY.start) / input.mouseY.range 
-    // let greaterthan2 = input.mouseY.fraction > 1 ? 1 : input.mouseY.fraction
-    // console.log(input.mouseY.fraction < 0 ? 0 : greaterthan2)
+
     output.x.current = output.x.start + (input.mouseX.fraction * output.x.range)
-    console.log('output.x.current',output.x.current)
+    output.y.current = output.y.start + (input.mouseY.fraction * output.y.range)
+    // console.log('output.x.current',output.x.current)
+    
     pupilsArray.forEach((pupil,i)=>{
-        pupil.style.transform = `translateX(${output.x.current}px)`
+        pupil.style.transform = `translate(${output.x.current}px, ${output.y.current}px)`
     })
 }
-// console.log(input.mouseX.fraction)
+
 
 
 let handleResize = () => {

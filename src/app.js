@@ -11,10 +11,8 @@
     }
  }
 
-
 input.mouseX.range = input.mouseX.end - input.mouseX.start;
 input.mouseY.range = input.mouseY.end - input.mouseX.start;
-//  console.log(input.mouseX)
 
 let handleMouseMovement = (event) => {
     input.mouseX.current = event.clientX;

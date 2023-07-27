@@ -20,7 +20,7 @@ let handleMouseMovement = (event) => {
     input.mouseX.current = event.clientX;
     input.mouseX.fraction = (input.mouseX.current - input.mouseX.start) / input.mouseX.range
     let greaterthan1 = input.mouseX.fraction > 1 ? 1 : input.mouseX.fraction
-    // console.log(input.mouseX.fraction < 0 ? 0 : greaterthan1)
+    console.log(input.mouseX.fraction < 0 ? 0 : greaterthan1)
 
     input.mouseY.current = event.clientY
     input.mouseY.fraction = (input.mouseY.current - input.mouseY.start) / input.mouseY.range 
@@ -30,8 +30,7 @@ let handleMouseMovement = (event) => {
 
 let handleResize = () => {
     input.mouseX.end = window.innerWidth - 200;
-    input.mouseX.range = input.mouseX.end - input.mouseX.start; 
-
+    input.mouseX.range = input.mouseX.end - input.mouseX.start;
     input.mouseY.end = window.innerWidth;
     input.mouseY.range = input.mouseY.end - input.mouseY.start; 
 }

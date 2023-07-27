@@ -1,4 +1,9 @@
- let input = {
+let pupilsHTMLCollection = document.getElementsByClassName('pupil')
+let pupilsArray = Array.from(pupilsHTMLCollection)
+
+
+
+let input = {
     mouseX:{
         start:0,
         end: window.innerWidth,
@@ -40,6 +45,9 @@ let handleMouseMovement = (event) => {
     // console.log(input.mouseY.fraction < 0 ? 0 : greaterthan2)
     output.x.current = output.x.start + (input.mouseX.fraction * output.x.range)
     console.log('output.x.current',output.x.current)
+    pupilsArray.forEach((pupil,i)=>{
+        pupil.style.transform = `translateX(${output.x.current}px)`
+    })
 }
 // console.log(input.mouseX.fraction)
 

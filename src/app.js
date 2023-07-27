@@ -6,3 +6,12 @@
     },
     mouseY: {}
  }
+
+ input.mouseX.range = input.mouseX.end - input.mouseX.start;
+//  console.log(input.mouseX)
+
+let handleMouseMovement = () => {
+    console.log('event') 
+}
+
+window.addEventListener('mousemove', handleMouseMovement)

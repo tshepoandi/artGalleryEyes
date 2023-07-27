@@ -4,7 +4,11 @@
         end: window.innerWidth - 200,
         current:0,
     },
-    mouseY: {}
+    mouseY: {
+        start: 0,
+        end:window.innerHeight - 200,
+        current: 0,
+    }
  }
 
  input.mouseX.range = input.mouseX.end - input.mouseX.start;

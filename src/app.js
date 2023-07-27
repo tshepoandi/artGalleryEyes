@@ -12,8 +12,10 @@
 
 let handleMouseMovement = (event) => {
     input.mouseX.current = event.clientX;
-    input.mouseX.fraction = (input.mouseX.current - input.mouseX.start) / input.mouseX.range 
-    console.log(input.mouseX.fraction) 
+    input.mouseX.fraction = (input.mouseX.current - input.mouseX.start) / input.mouseX.range
+    let greaterthan1 = input.mouseX.fraction > 1 ? 1 : input.mouseX.fraction
+    console.log(input.mouseX.fraction < 0 ? 0 : greaterthan1) 
+
 }
 
 let handleResize = () => {

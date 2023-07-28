@@ -1,7 +1,8 @@
 let pupilsHTMLCollection = document.getElementsByClassName('pupil')
 let pupilsArray = Array.from(pupilsHTMLCollection)
 
-
+let divsHTMLcollection = document.getElementsByClassName('parallax-item')
+let divsArray = Array.from(pupilsHTMLCollection)
 
 let input = {
     mouseX:{

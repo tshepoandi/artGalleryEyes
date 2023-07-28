@@ -21,13 +21,13 @@ input.mouseY.range = input.mouseY.end - input.mouseX.start;
 
  let output = {
     x:{ 
-        start: -100,
-        end: 100,
+        start: -80,
+        end: 80,
         current: 0,
     },
     y:{
-        start: -100,
-        end: 100,
+        start: -80,
+        end: 80,
         current:0,    
     }
  }

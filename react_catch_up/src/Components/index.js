@@ -13,17 +13,22 @@ const Question = () => {
         console.log(data.results);
       });
   }, []);
-  
+
   return (
    <QuestionDiv>
       <QuestionTitle className='Question'>HI</QuestionTitle>
       <GameQuestions className='QuestionFromAPI'>
-        {questions.map((question, index) => (
+        {/* {questions.map((question, index) => (
           <div key={index}>
             <h3>Question {index + 1}</h3>
             <p>{question.question}</p>
+            <p>{}</p>
           </div>
-        ))}
+        ))} */}
+
+        <p>{questions[0].question}</p>
+        <p>{questions[0].category}</p>
+        <p>{questions[0].correct_answer}</p>
       </GameQuestions>
     </QuestionDiv>
   )
